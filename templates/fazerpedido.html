@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fazerpedido.css') }}">
+
+    </head>
+    <body class='corpo'>
+    
+            <div class="topnav">
+                
+                    <a  href="/home">Home</a>
+                    <a href="/cardapio">Cardápio</a>
+                    <a class ='active' href="/fazerpedido">Fazer Pedido </a>
+                    <a href="/home#cont">Contato</a>
+                 </div>
+                 <div class='corpo2'>
+                        <text class='top'>
+                                Informações para entrega
+                           </text>
+                 </div>
+                 <img class='iconpizza' src="/static/delivery.png">
+                 
+         
+               
+               
+                  <!--Importando Script Jquery-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!--Formulário-->
+  
+<form action="/sucesso" method="POST" class="center" name="dados" autocomplete="off">
+    <div class='todo'>
+        <br>
+<label for="cep" class='label1' > Insira o seu CEP:</label>
+        <input  class='input1' placeholder="Ex: 12345-678" id="cep" type="text" name="CEP"/>
+      
+<label class='label2' for="logradouro">Rua:</label>
+<br>
+		<input  class='input' id="logradouro" type="text" required="required" name="rua"/>
+<label class='label3' for="numero">Número:</label>
+<br>
+		<input class='input' id="numero" type="number" required="required" name="num"/>
+<label class='label4' for="complemento">Complemento:</label>
+<br>
+		<input  class='input' id="complemento" type="text" name="complemento"/>
+<label class='label5' for="bairro">Bairro:</label>
+<br>
+        <input class='input' id="bairro" type="text" required="required" name="bairro"/>
+        <label class='label6'> Nome: </label>
+        <br>
+        
+        <input class='input' type='text' required="required" name="nome"/>
+        <label class='label7'> CPF: </label>
+        <br>
+        
+        <input class='input' type='number' required="required" name="CPF" maxlength="11" minlength="11"/>
+        <label class='label8'> Telefone: </label>
+        <br>
+        
+        <input class='input' type='number' required="required" name="tel"/>
+
+	
+		
+        </select>
+    </div>
+
+
+<script type="text/javascript">
+	$("#cep").focusout(function(){
+	
+	});
+</script>
+<script type="text/javascript">
+	$("#cep").focusout(function(){
+	
+		$.ajax({
+			//O campo URL diz o caminho de onde virá os dados
+			//É importante concatenar o valor digitado no CEP
+			url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+			//Aqui você deve preencher o tipo de dados que será lido,
+			//no caso, estamos lendo JSON.
+			dataType: 'json',
+			//SUCESS é referente a função que será executada caso
+			//ele consiga ler a fonte de dados com sucesso.
+			//O parâmetro dentro da função se refere ao nome da variável
+			//que você vai dar para ler esse objeto.
+			success: function(resposta){
+				//Agora basta definir os valores que você deseja preencher
+				//automaticamente nos campos acima.
+				$("#logradouro").val(resposta.logradouro);
+				$("#bairro").val(resposta.bairro);
+				$("#cidade").val(resposta.localidade);
+				$("#uf").val(resposta.uf);
+				//Vamos incluir para que o Número seja focado automaticamente
+				//melhorando a experiência do usuário
+				$("#numero").focus();
+			}
+		});
+	});
+    
+
+</script>
+ <text class='preco'>O preço total do seu pedido foi R${{ preco }} </text>
+ 
+<text  class='paga'> Forma de Pagamento: </text>
+<input class='um' required="required" name="forma" value="card" type="radio"> <label class='card'>cartão</label> <br>
+
+ <input class='dois'required="required" background-color="white" name="forma" value="dinheiro" type="radio">
+<label class='segunda'>dinheiro</label><br>
+
+
+<button align="center" type="submit" value="Fazer Pedido" name="concluir" class="botao2" formmethod="POST">
+Fazer Pedido
+</button>
+
+<div align="center"><input class='botao3' name="selecionar " value="selecionar" formmethod="post" type="submit"> 
+<br>
+<br>
+<br>
+
+
+                   
+    </body>  
+</form>
+
+</html>

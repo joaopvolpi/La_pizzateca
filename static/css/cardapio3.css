@@ -1,0 +1,123 @@
+.topnav {
+    background-color: black;
+    overflow: hidden;
+    margin-left:-10px;
+    margin-top:-10px;
+  }
+  
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .active, .btn:hover {
+    background-color: #363636;
+    color: white;
+  }
+
+
+  .corpo {
+      background-image: url(https://mcanneyesposito.com/cioppino2017/wp-content/uploads/2017/02/Cioppino-hero-2.jpg);
+      background-color:black;
+      background-position: center;
+      height:700px;
+  }
+  .cardapio {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 100;
+      font-size: 60px;
+      color:white;
+      margin-left:520px;
+      margin-top:100px;
+  }
+  .la{
+      margin-top:40px;
+  }
+  .nav2 {
+    background-color: sandybrown;
+    overflow: hidden;
+    margin-left:300px;
+    position:absolute;
+    margin-top:30px;
+  
+  }
+  
+  
+  .nav2 a {
+    float: left;
+    color: #f2f2f2;
+    padding: 16px 55px;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+
+  .nav2 a:hover {
+    background-color: coral;
+    color: white;
+  }
+  .nav2 a.active {
+    background-color: coral;
+    color: white;
+  }
+  .corpobebidas {
+    display:flexbox;
+    flex-direction: column;
+    width:785px;
+    background-color:ivory;
+    position:absolute;
+    margin-top: 80px;
+    color:black;
+    margin-left:300px;
+    overflow: auto;
+    height:360px;
+    padding-bottom:20px;
+   
+  }
+  .diven{
+    display:inline-flex;
+    justify-content: space-between;
+    width:735px;
+    margin-top:15px;
+    margin-left:20px;
+  }
+  .pizzatype{
+    font-size:25px;
+    font-weight:500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .price{
+    background-color:navajowhite;
+    height:20px;
+   width:105px;
+   padding-left:3px;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+ 
+  }
+ .desc {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:10px;
+    font-size:14px;
+    margin-top:10px;
+   
+ }
+ .tamanho {
+  
+  margin-top:-10px;
+  margin-bottom:-10px;
+   margin-right:10px;
+   font-size:18px;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+ }

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"/>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+    </head>
+    <body class='corpo'>
+            <body onload="window.open('img src=""{{url_for('static', filename='promo.jpeg')}}""','_blank','width=500,height=400,left=400,top=200, ' )"></body>
+     <div class="topnav">
+   
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               
+                   
+                      <span class="navbar-toggler-icon"></span>
+                   
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="home">Home <span class="sr-only"></span></a>
+                        <a class="nav-item nav-link" href="cardapio">Cardápio</a>
+                        <a class="nav-item nav-link" href="fazerpedido">Fazer Pedido</a>
+                        <a class="nav-item nav-link" href="home#cont">Contato</a>
+                        
+                      </div>
+                    </div>
+                  </nav>   
+     </div>
+     <div class='corpo1'>
+        
+            <img class='pizza3' src='https://instagram.fsdu5-1.fna.fbcdn.net/vp/f96d9f499a947f7bb108c2b2c7264101/5E5EE1C5/t51.2885-15/sh0.08/e35/s640x640/39945094_378074896063116_1140426736073179136_n.jpg?_nc_ht=instagram.fsdu5-1.fna.fbcdn.net&_nc_cat=100'>
+         <text class='titulo'></text>
+         <img class='logo' src='https://static.wixstatic.com/media/42966d_0a7bb91c8aab440ca40b640013f56fea~mv2_d_2591_1650_s_2.png/v1/fit/w_2500,h_1330,al_c/42966d_0a7bb91c8aab440ca40b640013f56fea~mv2_d_2591_1650_s_2.png'>
+         <img class='pizza1' src="https://instagram.fsdu5-1.fna.fbcdn.net/vp/00647cc4a790630370c368ee4ba8131d/5E4B5D07/t51.2885-15/sh0.08/e35/s640x640/72755717_525136721634499_7958697154148182647_n.jpg?_nc_ht=instagram.fsdu5-1.fna.fbcdn.net&_nc_cat=107">
+         <img class='pizza2' src='https://instagram.fsdu5-1.fna.fbcdn.net/vp/5dd9a0cb85a6ce2af1f29d95929d5898/5E4EB91B/t51.2885-15/sh0.08/e35/s640x640/41535319_478138552691496_7399706899873959075_n.jpg?_nc_ht=instagram.fsdu5-1.fna.fbcdn.net&_nc_cat=100'>
+     
+       
+       
+    <div class='corpo2'>
+   
+         <text class='cardapio' id='card'>
+             O Cardápio
+         </text>
+   </div>
+   <div class='nav2'>
+        <a class="active" href="home#card">Entradas</a>
+        <a  href="paesrecheados">Pães Recheados</a>
+        <a   href="pizzas">Pizzas</a>
+        <a   href="bebidas">Bebidas</a>
+       
+
+   </div>
+
+  <div class='tabelapizza'>
+      <text class='title'>
+          Crostata de Alecrim
+      </text>
+      <text class='preço'> R$ 16,90</text>
+     
+  </div>
+  <div class='tabelapizza2'>
+        <text class='desc'>
+                Massa fina, alecrim e parmigiano
+            </text>
+  </div>
+  <div class='tabelapizza3'>
+      <text class='title'> Crostata de Gorgonzola</text>
+      <text class='preço'>
+            R$ 23,90
+        </text>
+  </div>
+  <div class=tabelapizza4>
+      <text class='desc'> Massa fina, gorgonzola, parmigiano e alecrim fresco</text>
+  </div>
+  <div class='linha-horizontal'>
+
+  </div>
+  <div class=tabelapizza5>
+      <text class='title'>
+Crostata Pizzateca
+      </text>
+      <text class='preço'>
+          R$ 39,90
+      </text>
+  </div>
+  <div class='tabelapizza6'>
+      <text class='desc'>
+          Massa fina, alecrim fresco, rúcula, presunto de parma e mozzarelline
+      </text>
+  </div>
+  <div class=tabelapizza7>
+        <text class='title'>
+  Rondelline de Calabresa
+        </text>
+        <text class='preço'>
+            R$ 19,80
+        </text>
+    </div>
+    
+ 
+  <div class='fazerpedido'>
+      
+  </div>
+    
+      
+        
+      </table>
+      <div class='corpo3'>
+          <text class='contato'  id='cont'>
+              Contato
+          </text>
+      </div>
+      <div class='endhora'>
+          <text class='end'>
+              Endereço
+          </text>
+          <text class='hora'>
+                Horário de Atendimento
+          </text>
+          <text class='end2'>
+              Rua Cinco de Julho, 395, Copacabana
+              <br>
+               Rio de Janeiro, RJ 22051-030
+               <br>
+           Email:  pizzatecabrasil@gmail.com
+           <br>
+           Telefone: 021 3518-3444
+           <div class="linha-vertical"></div>
+          </text>
+          <div class='hora'>
+              <text class='hora2'>
+                  Terça - Quinta  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  17:00 - 23:00
+                  <br>
+
+                  Sexta e Sábado  &nbsp;&nbsp;&nbsp;&nbsp;  17:00 - 24:00
+                  <br>
+                  Domingo    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   17:00 - 23:00
+
+              </text>
+          </div>
+          <iframe class='mapa' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6307.756146421372!2d-43.19796736725643!3d-22.97129977013911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd543c91889a7%3A0x379c08edbc845d84!2sR.%205%20de%20Julho%2C%20395%20-%20Copacabana%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022051-030!5e0!3m2!1spt-BR!2sbr!4v1573696263895!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    
+    </body>  
+</html>

@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>Portal do admin</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fazerpedido3.css') }}">
+        <style>
+            body {
+                background-color: navajowhite;
+            }
+            #divzona{
+                text-align: center;
+            }
+            #div1{
+                border: 0.5px solid black;
+            }
+            #div2{
+                margin-top: 20px;
+                border: 0.5px solid black;
+            }
+            #div3{
+                border: 0.5px solid black;
+                margin-top: 20px;
+            }
+            #div4{
+                border: 0.5px solid black;
+                margin-top: 20px;
+            }
+        
+        </style>
+    </head>
+    
+    
+    <body class='corpo'>
+	
+
+    
+            <div class="topnav">
+                    <a  href="home">Home</a>
+                    <a href="home#card">Cardápio</a>
+                    <a  href="fazerpedido">Fazer Pedido</a>
+                    <a href="home#cont">Contato</a>
+                 </div>
+        <div id="divzona">
+            <h2>Bem vindo, admin!</h2>
+            <br><br>
+        
+        {% if pedidos %}
+        <h3>Pedidos a serem feitos:</h3>
+        
+        <table style="width:92%;" align="center">
+        <tr>
+            <th>Número</th>
+            <th>Descrição</th>
+            <th>Preço</th> 
+            <th>CEP</th>
+            <th>Rua</th>
+            <th>Num</th> 
+            <th>Complemento</th>
+            <th>Bairro</th>
+            <th>Nome Cliente</th> 
+            <th>Telefone</th>
+            <th>Pagamento</th> 
+        </tr>
+        {% for pedido in pedidos%}
+        {% if pedido[9] %}
+        <br>
+        <tr>
+            <td>{{pedido[0]}}</td>
+            <td>{{pedido[1]}}</td>
+            <td>{{pedido[2]}}</td>
+            <td>{{pedido[3]}}</td>
+            <td>{{pedido[4]}}</td>
+            <td>{{pedido[5]}}</td>
+            <td>{{pedido[6]}}</td>
+            <td>{{pedido[7]}}</td>
+            <td>{{pedido[8]}}</td>
+            <td>{{pedido[10]}}</td>
+            <td>{{pedido[11]}}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        </table>
+        <br>
+        <p>Número do pedido para concluir:</p>
+        <form action='/admin_conclui_pedido' method="POST">
+            <input type='text' name="concluirpedido">
+            <input type='submit'>
+        </form>
+        {% endif %}
+            <br><br>
+            <br><br>
+            <div id="div1">
+                <h3>Registrar pizza:</h3><br>
+                <form action="/postarpizza" method="POST" name="formulario" id="formulario">
+                Nome: <input name="nome" required="required">
+                <br><br>
+                Preço 30: <input name="preco30" required="required">
+                <br><br>
+                Preço 40: <input name="preco40" required="required">
+                <br><br>
+                <input type="submit" value="Registrar">
+                </form>
+            </div>
+            <div id="div2">
+                <h3>Deletar pizza:</h3><br>
+                <form action="/deletarpizza" method="POST" name="form2" id="form2">
+                <br><br>
+                Id da pizza: <input name="idpizza" required="required">
+                <br><br>
+                <input type="submit" value="Deletar">
+                </form>
+            </div>
+
+            
+            
+        </div>
+
+        
+
+    </body>
+
+</html>

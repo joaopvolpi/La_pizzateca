@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/cardapio3.css') }}"/>
+    </head>
+    <body class='corpo'>
+    
+            <div class="topnav">
+                    <a  href="home">Home</a>
+                    <a class ='active' href="#cardapio">Cardápio</a>
+                    <a  href="fazerpedido">Fazer Pedido</a>
+                    
+                    <a href="home#cont">Contato</a>
+                 </div>
+             
+                          
+                   
+    </body>  
+    <div class="corpo">
+      <div class="la">
+            <text class="cardapio">
+                    O Cardápio
+                </text>
+      </div>  
+        <div class='nav2'>
+                <a  href="cardapio" >Entradas</a>
+                <a href="paesrecheados">Pães Recheados</a>
+                <a  class="active" href="pizzas">Pizzas</a>
+                <a href="bebidas">Bebidas</a>
+        </div>
+      
+              
+   <div class="corpobebidas">
+      
+      
+
+        <div class="diven">
+           
+                <text class="nada"></text>
+                <text class="tamanho"> Média / Grande </text>
+                
+         </div>
+               
+       
+                {% for pizza in pizzas %}
+                <div class="diven">
+                        <text class="pizzatype">{{pizza[1]}}</text> 
+                        <text class="price">R${{pizza[2]}} / R${{pizza[3]}}</text>
+                </div>
+                {% endfor %}
+                
+                
+                    
+        
+        <text class="desc"> </text>
+                 
+           
+
+
+</div>
+               
+
+    </div>
+
+</html>
